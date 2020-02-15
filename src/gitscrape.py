@@ -30,8 +30,9 @@ class gitscrape(argparse.Action):
         self.user = values
         self.url = requests.get("https://github.com/" + self.user)
         if self.url.status_code != requests.codes.ok:
-            print(RED, "Unable to find username. Please enter"
+            print(RED, '\n', "Unable to find username. Please enter"
                        " valid username and try again.")
+            self.spinner.stop()
             sys.exit()
 
         self.full_name = self.location = "No Information Provided"
