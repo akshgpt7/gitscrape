@@ -35,6 +35,7 @@ What all it fetches:
  3. To get a user's details, `python3 gitscrape.py <username>`.
  
 ## Gallery
+![output screenshot](https://raw.githubusercontent.com/akshgpt7/gitscrape/master/screenshots/output.png)
  
 ## Contributing
 Any new features, improvements, additions, suggestions or issues are welcome! <br>
