@@ -1,0 +1,12 @@
+[flake8]
+ignore = W503, E722
+exclude =
+    .git,
+    .pytest_cache,
+    .venv,
+    __pycache__,
+    build,
+    dist,
+    docs/source/conf.py,
+    old,
+    venv
