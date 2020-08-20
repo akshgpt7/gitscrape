@@ -33,6 +33,15 @@ What all it fetches:
  1. Change working directory by `cd gitscrape/src`.
  2. To see all features and help, run `python3 gitscrape.py -h`.
  3. To get a user's details, `python3 gitscrape.py <username>`.
+
+```
+positional arguments:
+  username      Username of the user to fetch details.
+
+optional arguments:
+  -h, --help    show this help message and exit
+  -a, --avatar  Display avatar of user.
+```
  
 ## Gallery
 ![output screenshot](https://raw.githubusercontent.com/akshgpt7/gitscrape/master/screenshots/output.png)
