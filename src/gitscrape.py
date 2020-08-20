@@ -57,11 +57,12 @@ class gitscrape(argparse.Action):
             self.repo_list.append(i.get('href').lstrip('/'))
 
         self.email = self.get_email()
-        self.counters = self.soup.select('.Counter')
-        self.repositories = self.counters[0].get_text().strip()
-        self.stars = self.counters[2].get_text().strip()
-        self.followers = self.counters[3].get_text().strip()
-        self.following = self.counters[4].get_text().strip()
+
+        self.repositories = self.soup.select('.Counter')[0].get_text()
+        self.info_links = self.soup.select('span[class="text-bold text-gray-dark"]')
+        self.followers = self.info_links[0].get_text().strip()
+        self.following = self.info_links[1].get_text().strip()
+        self.stars = self.info_links[2].get_text().strip()
 
         user_id = self.soup.select(
             'form[class="js-site-search-form"]')[0].get('data-scope-id')
