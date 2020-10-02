@@ -20,7 +20,6 @@ except ImportError:
 
 
 class gitscrape(argparse.Action):
-    """Action class for username feature"""
 
     def __call__(self, parser, namespace, values, option_string=None):
         # Spinner
